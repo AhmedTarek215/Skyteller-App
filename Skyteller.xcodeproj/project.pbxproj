@@ -55,11 +55,10 @@
 		093AA6912FE87C9800F9DF60 /* Skyteller */ = {
 			isa = PBXGroup;
 			children = (
-				093AA6922FE87C9800F9DF60 /* SkytellerApp.swift */,
-				093AA6942FE87C9800F9DF60 /* ContentView.swift */,
-				093AA6962FE87C9A00F9DF60 /* Assets.xcassets */,
-				093AA69B2FE87C9A00F9DF60 /* Persistence.swift */,
-				093AA69D2FE87C9A00F9DF60 /* Skyteller.xcdatamodeld */,
+				093AA6AD2FE8838800F9DF60 /* Resources */,
+				093AA6A72FE8832000F9DF60 /* Modules */,
+				093AA6A62FE8831500F9DF60 /* Model */,
+				093AA6A52FE8830100F9DF60 /* App */,
 				093AA6982FE87C9A00F9DF60 /* Preview Content */,
 			);
 			path = Skyteller;
@@ -71,6 +70,71 @@
 				093AA6992FE87C9A00F9DF60 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		093AA6A52FE8830100F9DF60 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				093AA6922FE87C9800F9DF60 /* SkytellerApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		093AA6A62FE8831500F9DF60 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				093AA6A92FE8834600F9DF60 /* Services */,
+				093AA6A82FE8833A00F9DF60 /* Entities */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		093AA6A72FE8832000F9DF60 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				093AA6942FE87C9800F9DF60 /* ContentView.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		093AA6A82FE8833A00F9DF60 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		093AA6A92FE8834600F9DF60 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				093AA6AB2FE8836B00F9DF60 /* Remote */,
+				093AA6AA2FE8834D00F9DF60 /* Local */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		093AA6AA2FE8834D00F9DF60 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				093AA69B2FE87C9A00F9DF60 /* Persistence.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		093AA6AB2FE8836B00F9DF60 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		093AA6AD2FE8838800F9DF60 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				093AA69D2FE87C9A00F9DF60 /* Skyteller.xcdatamodeld */,
+				093AA6962FE87C9A00F9DF60 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
