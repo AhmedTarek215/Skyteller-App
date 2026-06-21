@@ -13,6 +13,7 @@
 		093AA69A2FE87C9A00F9DF60 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 093AA6992FE87C9A00F9DF60 /* Preview Assets.xcassets */; };
 		093AA69C2FE87C9A00F9DF60 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093AA69B2FE87C9A00F9DF60 /* Persistence.swift */; };
 		093AA69F2FE87C9A00F9DF60 /* Skyteller.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 093AA69D2FE87C9A00F9DF60 /* Skyteller.xcdatamodeld */; };
+		093AA6AF2FE8845C00F9DF60 /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093AA6AE2FE8845C00F9DF60 /* WeatherResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		093AA6992FE87C9A00F9DF60 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		093AA69B2FE87C9A00F9DF60 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		093AA69E2FE87C9A00F9DF60 /* Skyteller.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Skyteller.xcdatamodel; sourceTree = "<group>"; };
+		093AA6AE2FE8845C00F9DF60 /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 		093AA6A82FE8833A00F9DF60 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				093AA6AE2FE8845C00F9DF60 /* WeatherResponse.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				093AA69C2FE87C9A00F9DF60 /* Persistence.swift in Sources */,
+				093AA6AF2FE8845C00F9DF60 /* WeatherResponse.swift in Sources */,
 				093AA69F2FE87C9A00F9DF60 /* Skyteller.xcdatamodeld in Sources */,
 				093AA6952FE87C9800F9DF60 /* ContentView.swift in Sources */,
 				093AA6932FE87C9800F9DF60 /* SkytellerApp.swift in Sources */,
