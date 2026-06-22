@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct WeatherResponse : Codable {
+struct ForecastResponse : Codable {
     var location : Location?
     var current : CurrentForecast?
     var forecast : Forecast?

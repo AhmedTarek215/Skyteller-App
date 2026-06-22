@@ -13,10 +13,13 @@
 		093AA69A2FE87C9A00F9DF60 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 093AA6992FE87C9A00F9DF60 /* Preview Assets.xcassets */; };
 		093AA69C2FE87C9A00F9DF60 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093AA69B2FE87C9A00F9DF60 /* Persistence.swift */; };
 		093AA69F2FE87C9A00F9DF60 /* Skyteller.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 093AA69D2FE87C9A00F9DF60 /* Skyteller.xcdatamodeld */; };
-		093AA6AF2FE8845C00F9DF60 /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093AA6AE2FE8845C00F9DF60 /* WeatherResponse.swift */; };
-		093AA6B32FE8913100F9DF60 /* Local Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093AA6B22FE8913100F9DF60 /* Local Services.swift */; };
+		093AA6AF2FE8845C00F9DF60 /* ForecastResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093AA6AE2FE8845C00F9DF60 /* ForecastResponse.swift */; };
+		093AA6B32FE8913100F9DF60 /* LocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093AA6B22FE8913100F9DF60 /* LocalService.swift */; };
 		097548772FE92F9D00C49AD3 /* City+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097548752FE92F9D00C49AD3 /* City+CoreDataClass.swift */; };
 		097548782FE92F9D00C49AD3 /* City+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097548762FE92F9D00C49AD3 /* City+CoreDataProperties.swift */; };
+		0975487B2FE9339900C49AD3 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0975487A2FE9339900C49AD3 /* Alamofire */; };
+		0975487D2FE9339900C49AD3 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 0975487C2FE9339900C49AD3 /* AlamofireDynamic */; };
+		0975487F2FE9340C00C49AD3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0975487E2FE9340C00C49AD3 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,10 +30,11 @@
 		093AA6992FE87C9A00F9DF60 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		093AA69B2FE87C9A00F9DF60 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		093AA69E2FE87C9A00F9DF60 /* Skyteller.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Skyteller.xcdatamodel; sourceTree = "<group>"; };
-		093AA6AE2FE8845C00F9DF60 /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
-		093AA6B22FE8913100F9DF60 /* Local Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Local Services.swift"; sourceTree = "<group>"; };
+		093AA6AE2FE8845C00F9DF60 /* ForecastResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastResponse.swift; sourceTree = "<group>"; };
+		093AA6B22FE8913100F9DF60 /* LocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalService.swift; sourceTree = "<group>"; };
 		097548752FE92F9D00C49AD3 /* City+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "City+CoreDataClass.swift"; sourceTree = "<group>"; };
 		097548762FE92F9D00C49AD3 /* City+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "City+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0975487E2FE9340C00C49AD3 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +42,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0975487B2FE9339900C49AD3 /* Alamofire in Frameworks */,
+				0975487D2FE9339900C49AD3 /* AlamofireDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,8 +53,6 @@
 		093AA6862FE87C9800F9DF60 = {
 			isa = PBXGroup;
 			children = (
-				097548752FE92F9D00C49AD3 /* City+CoreDataClass.swift */,
-				097548762FE92F9D00C49AD3 /* City+CoreDataProperties.swift */,
 				093AA6912FE87C9800F9DF60 /* Skyteller */,
 				093AA6902FE87C9800F9DF60 /* Products */,
 			);
@@ -110,7 +114,7 @@
 		093AA6A82FE8833A00F9DF60 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				093AA6AE2FE8845C00F9DF60 /* WeatherResponse.swift */,
+				093AA6AE2FE8845C00F9DF60 /* ForecastResponse.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -127,8 +131,10 @@
 		093AA6AA2FE8834D00F9DF60 /* Local */ = {
 			isa = PBXGroup;
 			children = (
+				097548762FE92F9D00C49AD3 /* City+CoreDataProperties.swift */,
+				097548752FE92F9D00C49AD3 /* City+CoreDataClass.swift */,
 				093AA69B2FE87C9A00F9DF60 /* Persistence.swift */,
-				093AA6B22FE8913100F9DF60 /* Local Services.swift */,
+				093AA6B22FE8913100F9DF60 /* LocalService.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -136,6 +142,7 @@
 		093AA6AB2FE8836B00F9DF60 /* Remote */ = {
 			isa = PBXGroup;
 			children = (
+				0975487E2FE9340C00C49AD3 /* NetworkService.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -165,6 +172,10 @@
 			dependencies = (
 			);
 			name = Skyteller;
+			packageProductDependencies = (
+				0975487A2FE9339900C49AD3 /* Alamofire */,
+				0975487C2FE9339900C49AD3 /* AlamofireDynamic */,
+			);
 			productName = Skyteller;
 			productReference = 093AA68F2FE87C9800F9DF60 /* Skyteller.app */;
 			productType = "com.apple.product-type.application";
@@ -193,6 +204,9 @@
 				Base,
 			);
 			mainGroup = 093AA6862FE87C9800F9DF60;
+			packageReferences = (
+				097548792FE9339900C49AD3 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 093AA6902FE87C9800F9DF60 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -220,11 +234,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				093AA69C2FE87C9A00F9DF60 /* Persistence.swift in Sources */,
-				093AA6AF2FE8845C00F9DF60 /* WeatherResponse.swift in Sources */,
-				093AA6B32FE8913100F9DF60 /* Local Services.swift in Sources */,
+				093AA6AF2FE8845C00F9DF60 /* ForecastResponse.swift in Sources */,
+				093AA6B32FE8913100F9DF60 /* LocalService.swift in Sources */,
 				093AA69F2FE87C9A00F9DF60 /* Skyteller.xcdatamodeld in Sources */,
 				097548782FE92F9D00C49AD3 /* City+CoreDataProperties.swift in Sources */,
 				093AA6952FE87C9800F9DF60 /* ContentView.swift in Sources */,
+				0975487F2FE9340C00C49AD3 /* NetworkService.swift in Sources */,
 				097548772FE92F9D00C49AD3 /* City+CoreDataClass.swift in Sources */,
 				093AA6932FE87C9800F9DF60 /* SkytellerApp.swift in Sources */,
 			);
@@ -430,6 +445,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		097548792FE9339900C49AD3 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0975487A2FE9339900C49AD3 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 097548792FE9339900C49AD3 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		0975487C2FE9339900C49AD3 /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 097548792FE9339900C49AD3 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		093AA69D2FE87C9A00F9DF60 /* Skyteller.xcdatamodeld */ = {

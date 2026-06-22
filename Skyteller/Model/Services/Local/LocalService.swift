@@ -8,11 +8,13 @@
 import Foundation
 import CoreData
 
-protocol LocalServicesProtocol {
-    
+protocol LocalServiceProtocol {
+    func addCity(name: String, country: String)
+    func deleteCity(name: String)
+    func isCitySaved(name: String) -> Bool
 }
 
-class LocalServices : LocalServicesProtocol {
+class LocalService : LocalServiceProtocol {
     
     private let context: NSManagedObjectContext
     
