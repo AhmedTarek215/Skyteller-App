@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		093AA6932FE87C9800F9DF60 /* SkytellerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093AA6922FE87C9800F9DF60 /* SkytellerApp.swift */; };
-		093AA6952FE87C9800F9DF60 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093AA6942FE87C9800F9DF60 /* ContentView.swift */; };
 		093AA6972FE87C9A00F9DF60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 093AA6962FE87C9A00F9DF60 /* Assets.xcassets */; };
 		093AA69A2FE87C9A00F9DF60 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 093AA6992FE87C9A00F9DF60 /* Preview Assets.xcassets */; };
 		093AA69C2FE87C9A00F9DF60 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093AA69B2FE87C9A00F9DF60 /* Persistence.swift */; };
@@ -21,12 +20,17 @@
 		0975487D2FE9339900C49AD3 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 0975487C2FE9339900C49AD3 /* AlamofireDynamic */; };
 		0975487F2FE9340C00C49AD3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0975487E2FE9340C00C49AD3 /* NetworkService.swift */; };
 		09F939012FEB1557009EA48B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F939002FEB1556009EA48B /* HomeViewModel.swift */; };
+		09F9390C2FEB1FFE009EA48B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F9390B2FEB1FFE009EA48B /* HomeView.swift */; };
+		09F9390E2FEB22AE009EA48B /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F9390D2FEB22AE009EA48B /* ThemeManager.swift */; };
+		09F939122FEB23FD009EA48B /* HomeBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F939112FEB23FD009EA48B /* HomeBottomView.swift */; };
+		09F939142FEB2405009EA48B /* HomeMiddleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F939132FEB2405009EA48B /* HomeMiddleView.swift */; };
+		09F939162FEB2409009EA48B /* HomeTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F939152FEB2409009EA48B /* HomeTopView.swift */; };
+		09F939182FEB2C7F009EA48B /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F939172FEB2C7F009EA48B /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		093AA68F2FE87C9800F9DF60 /* Skyteller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skyteller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		093AA6922FE87C9800F9DF60 /* SkytellerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkytellerApp.swift; sourceTree = "<group>"; };
-		093AA6942FE87C9800F9DF60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		093AA6962FE87C9A00F9DF60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		093AA6992FE87C9A00F9DF60 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		093AA69B2FE87C9A00F9DF60 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -37,6 +41,12 @@
 		097548762FE92F9D00C49AD3 /* City+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "City+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0975487E2FE9340C00C49AD3 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		09F939002FEB1556009EA48B /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		09F9390B2FEB1FFE009EA48B /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		09F9390D2FEB22AE009EA48B /* ThemeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		09F939112FEB23FD009EA48B /* HomeBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomView.swift; sourceTree = "<group>"; };
+		09F939132FEB2405009EA48B /* HomeMiddleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMiddleView.swift; sourceTree = "<group>"; };
+		09F939152FEB2409009EA48B /* HomeTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopView.swift; sourceTree = "<group>"; };
+		09F939172FEB2C7F009EA48B /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +101,7 @@
 		093AA6A52FE8830100F9DF60 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				09F9390D2FEB22AE009EA48B /* ThemeManager.swift */,
 				093AA6922FE87C9800F9DF60 /* SkytellerApp.swift */,
 			);
 			path = App;
@@ -109,7 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				09EA24A92FEB12BE009339F6 /* Home */,
-				093AA6942FE87C9800F9DF60 /* ContentView.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -137,6 +147,7 @@
 				097548762FE92F9D00C49AD3 /* City+CoreDataProperties.swift */,
 				097548752FE92F9D00C49AD3 /* City+CoreDataClass.swift */,
 				093AA69B2FE87C9A00F9DF60 /* Persistence.swift */,
+				09F939172FEB2C7F009EA48B /* LocationManager.swift */,
 				093AA6B22FE8913100F9DF60 /* LocalService.swift */,
 			);
 			path = Local;
@@ -171,6 +182,10 @@
 		09EA24AA2FEB12DB009339F6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				09F9390B2FEB1FFE009EA48B /* HomeView.swift */,
+				09F939112FEB23FD009EA48B /* HomeBottomView.swift */,
+				09F939132FEB2405009EA48B /* HomeMiddleView.swift */,
+				09F939152FEB2409009EA48B /* HomeTopView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -261,12 +276,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				093AA69C2FE87C9A00F9DF60 /* Persistence.swift in Sources */,
+				09F9390C2FEB1FFE009EA48B /* HomeView.swift in Sources */,
+				09F939182FEB2C7F009EA48B /* LocationManager.swift in Sources */,
+				09F9390E2FEB22AE009EA48B /* ThemeManager.swift in Sources */,
 				093AA6AF2FE8845C00F9DF60 /* ForecastResponse.swift in Sources */,
 				093AA6B32FE8913100F9DF60 /* LocalService.swift in Sources */,
 				09F939012FEB1557009EA48B /* HomeViewModel.swift in Sources */,
+				09F939162FEB2409009EA48B /* HomeTopView.swift in Sources */,
+				09F939142FEB2405009EA48B /* HomeMiddleView.swift in Sources */,
+				09F939122FEB23FD009EA48B /* HomeBottomView.swift in Sources */,
 				093AA69F2FE87C9A00F9DF60 /* Skyteller.xcdatamodeld in Sources */,
 				097548782FE92F9D00C49AD3 /* City+CoreDataProperties.swift in Sources */,
-				093AA6952FE87C9800F9DF60 /* ContentView.swift in Sources */,
 				0975487F2FE9340C00C49AD3 /* NetworkService.swift in Sources */,
 				097548772FE92F9D00C49AD3 /* City+CoreDataClass.swift in Sources */,
 				093AA6932FE87C9800F9DF60 /* SkytellerApp.swift in Sources */,
@@ -405,6 +425,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Skyteller/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location for the weather.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -433,6 +454,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Skyteller/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location for the weather.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -15,7 +15,7 @@ protocol NetworkServiceProtocol {
 
 class NetworkService : NetworkServiceProtocol {
     func fetchForecastByCity(cityName: String, completion: @escaping (ForecastResponse?, Error?) -> Void) {
-        let urlString = "http://api.weatherapi.com/v1/forecast.json"
+        let urlString = "https://api.weatherapi.com/v1/forecast.json"
         
         let parameters: [String: String] = [
             "key": "dea033bbd53b47efbbf181343261706",
@@ -41,7 +41,7 @@ class NetworkService : NetworkServiceProtocol {
     }
     
     func fetchForecastByLocation(long: Double, lat: Double, completion: @escaping (ForecastResponse?, Error?) -> Void) {
-        let urlString = "http://api.weatherapi.com/v1/forecast.json"
+        let urlString = "https://api.weatherapi.com/v1/forecast.json"
         
         let location = "\(lat),\(long)"
         
