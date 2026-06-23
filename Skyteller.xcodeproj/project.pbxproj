@@ -20,6 +20,7 @@
 		0975487B2FE9339900C49AD3 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0975487A2FE9339900C49AD3 /* Alamofire */; };
 		0975487D2FE9339900C49AD3 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 0975487C2FE9339900C49AD3 /* AlamofireDynamic */; };
 		0975487F2FE9340C00C49AD3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0975487E2FE9340C00C49AD3 /* NetworkService.swift */; };
+		09F939012FEB1557009EA48B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F939002FEB1556009EA48B /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		097548752FE92F9D00C49AD3 /* City+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "City+CoreDataClass.swift"; sourceTree = "<group>"; };
 		097548762FE92F9D00C49AD3 /* City+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "City+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0975487E2FE9340C00C49AD3 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		09F939002FEB1556009EA48B /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 		093AA6A72FE8832000F9DF60 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				09EA24A92FEB12BE009339F6 /* Home */,
 				093AA6942FE87C9800F9DF60 /* ContentView.swift */,
 			);
 			path = Modules;
@@ -154,6 +157,30 @@
 				093AA6962FE87C9A00F9DF60 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		09EA24A92FEB12BE009339F6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				09EA24AB2FEB12E9009339F6 /* ViewModel */,
+				09EA24AA2FEB12DB009339F6 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		09EA24AA2FEB12DB009339F6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		09EA24AB2FEB12E9009339F6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				09F939002FEB1556009EA48B /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +263,7 @@
 				093AA69C2FE87C9A00F9DF60 /* Persistence.swift in Sources */,
 				093AA6AF2FE8845C00F9DF60 /* ForecastResponse.swift in Sources */,
 				093AA6B32FE8913100F9DF60 /* LocalService.swift in Sources */,
+				09F939012FEB1557009EA48B /* HomeViewModel.swift in Sources */,
 				093AA69F2FE87C9A00F9DF60 /* Skyteller.xcdatamodeld in Sources */,
 				097548782FE92F9D00C49AD3 /* City+CoreDataProperties.swift in Sources */,
 				093AA6952FE87C9800F9DF60 /* ContentView.swift in Sources */,
