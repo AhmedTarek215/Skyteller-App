@@ -18,11 +18,12 @@ struct Location : Codable {
 }
 
 struct CurrentForecast : Codable {
-    var temp_c : Float?
+    var temp_c : Double?
     var condition : WeatherCondition?
-    var pressure_mb : Float?
-    var humidity : Float?
-    var feelslike_c : Float?
+    var pressure_mb : Double?
+    var humidity : Int?
+    var feelslike_c : Double?
+    var vis_km : Double?
 }
 
 struct WeatherCondition : Codable {
@@ -35,19 +36,20 @@ struct Forecast : Codable {
 }
 
 struct ForecastDay : Codable {
+    var date : String?
     var day : Day?
     var hour : [HourlyForecast]?
 }
 
 struct Day : Codable {
-    var maxtemp_c : Float?
-    var mintemp_c : Float?
-    var avgvis_km : Float?
+    var maxtemp_c : Double?
+    var mintemp_c : Double?
+    var avgvis_km : Double?
     var condition : WeatherCondition?
 }
 
 struct HourlyForecast : Codable {
     var time : String?
-    var temp_c : Float?
+    var temp_c : Double?
     var condition : WeatherCondition?
 }
