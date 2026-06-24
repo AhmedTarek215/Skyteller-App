@@ -12,6 +12,7 @@ protocol LocalServiceProtocol {
     func addCity(name: String, country: String)
     func deleteCity(name: String)
     func isCitySaved(name: String) -> Bool
+    func fetchAllCities() -> [(name: String, country: String)]
 }
 
 class LocalService : LocalServiceProtocol {
@@ -61,6 +62,21 @@ class LocalService : LocalServiceProtocol {
         } catch {
             print("Error checking if city exists: \(error.localizedDescription)")
             return false
+        }
+    }
+    
+    func fetchAllCities() -> [(name: String, country: String)] {
+        let fetchRequest: NSFetchRequest<City> = City.fetchRequest()
+        
+        do {
+            let cities = try context.fetch(fetchRequest)
+            return cities.compactMap { city in
+                guard let name = city.name, let country = city.country else { return nil }
+                return (name: name, country: country)
+            }
+        } catch {
+            print("Error fetching cities: \(error.localizedDescription)")
+            return []
         }
     }
     
