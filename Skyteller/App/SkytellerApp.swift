@@ -14,9 +14,27 @@ struct SkytellerApp: App {
 
     var body: some Scene {
         WindowGroup {
-            HomeView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
-                .environmentObject(themeManager)
+            TabView {
+                HomeView()
+                    .tabItem {
+                        Image(systemName: "house.fill")
+                        Text("Home")
+                    }
+                
+                ExploreView()
+                    .tabItem {
+                        Image(systemName: "magnifyingglass")
+                        Text("Explorer")
+                    }
+                
+                Text("Favorites")
+                    .tabItem {
+                        Image(systemName: "star.fill")
+                        Text("Favorites")
+                    }
+            }
+            .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            .environmentObject(themeManager)
         }
     }
 }

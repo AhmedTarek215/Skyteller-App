@@ -19,6 +19,11 @@
 		0975487B2FE9339900C49AD3 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0975487A2FE9339900C49AD3 /* Alamofire */; };
 		0975487D2FE9339900C49AD3 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 0975487C2FE9339900C49AD3 /* AlamofireDynamic */; };
 		0975487F2FE9340C00C49AD3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0975487E2FE9340C00C49AD3 /* NetworkService.swift */; };
+		097B5DDE2FEC262C002542FB /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097B5DDD2FEC262C002542FB /* ExploreView.swift */; };
+		097B5DE02FEC2639002542FB /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097B5DDF2FEC2639002542FB /* ExploreViewModel.swift */; };
+		097B5DE42FEC2667002542FB /* CityWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097B5DE32FEC2667002542FB /* CityWeatherView.swift */; };
+		097B5DE62FEC266A002542FB /* CityWeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097B5DE52FEC266A002542FB /* CityWeatherViewModel.swift */; };
+		097B5DEB2FEC26E0002542FB /* WeatherLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097B5DEA2FEC26E0002542FB /* WeatherLayoutView.swift */; };
 		097BCD792FEBCD3100CC1ECD /* HourlyForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097BCD782FEBCD3100CC1ECD /* HourlyForecastView.swift */; };
 		09F939012FEB1557009EA48B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F939002FEB1556009EA48B /* HomeViewModel.swift */; };
 		09F9390C2FEB1FFE009EA48B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F9390B2FEB1FFE009EA48B /* HomeView.swift */; };
@@ -41,6 +46,11 @@
 		097548752FE92F9D00C49AD3 /* City+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "City+CoreDataClass.swift"; sourceTree = "<group>"; };
 		097548762FE92F9D00C49AD3 /* City+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "City+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0975487E2FE9340C00C49AD3 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		097B5DDD2FEC262C002542FB /* ExploreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
+		097B5DDF2FEC2639002542FB /* ExploreViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
+		097B5DE32FEC2667002542FB /* CityWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityWeatherView.swift; sourceTree = "<group>"; };
+		097B5DE52FEC266A002542FB /* CityWeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityWeatherViewModel.swift; sourceTree = "<group>"; };
+		097B5DEA2FEC26E0002542FB /* WeatherLayoutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeatherLayoutView.swift; path = Skyteller/Modules/Home/View/WeatherLayoutView.swift; sourceTree = SOURCE_ROOT; };
 		097BCD782FEBCD3100CC1ECD /* HourlyForecastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HourlyForecastView.swift; sourceTree = "<group>"; };
 		09F939002FEB1556009EA48B /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		09F9390B2FEB1FFE009EA48B /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -103,6 +113,7 @@
 		093AA6A52FE8830100F9DF60 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				097B5DEA2FEC26E0002542FB /* WeatherLayoutView.swift */,
 				09F9390D2FEB22AE009EA48B /* ThemeManager.swift */,
 				093AA6922FE87C9800F9DF60 /* SkytellerApp.swift */,
 			);
@@ -121,6 +132,8 @@
 		093AA6A72FE8832000F9DF60 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				097B5DE72FEC267C002542FB /* CityWeather */,
+				097B5DDA2FEC11FA002542FB /* Explore */,
 				09EA24A92FEB12BE009339F6 /* Home */,
 			);
 			path = Modules;
@@ -170,6 +183,56 @@
 				093AA6962FE87C9A00F9DF60 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		097B5DDA2FEC11FA002542FB /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				097B5DDC2FEC1212002542FB /* ViewModel */,
+				097B5DDB2FEC1206002542FB /* View */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		097B5DDB2FEC1206002542FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				097B5DDD2FEC262C002542FB /* ExploreView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		097B5DDC2FEC1212002542FB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				097B5DDF2FEC2639002542FB /* ExploreViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		097B5DE72FEC267C002542FB /* CityWeather */ = {
+			isa = PBXGroup;
+			children = (
+				097B5DE92FEC2699002542FB /* ViewModel */,
+				097B5DE82FEC2689002542FB /* View */,
+			);
+			path = CityWeather;
+			sourceTree = "<group>";
+		};
+		097B5DE82FEC2689002542FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				097B5DE32FEC2667002542FB /* CityWeatherView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		097B5DE92FEC2699002542FB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				097B5DE52FEC266A002542FB /* CityWeatherViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		097BCD7A2FEBCE2C00CC1ECD /* Subviews */ = {
@@ -288,19 +351,24 @@
 			files = (
 				093AA69C2FE87C9A00F9DF60 /* Persistence.swift in Sources */,
 				09F9390C2FEB1FFE009EA48B /* HomeView.swift in Sources */,
+				097B5DE62FEC266A002542FB /* CityWeatherViewModel.swift in Sources */,
 				09F939182FEB2C7F009EA48B /* LocationManager.swift in Sources */,
 				09F9390E2FEB22AE009EA48B /* ThemeManager.swift in Sources */,
 				093AA6AF2FE8845C00F9DF60 /* ForecastResponse.swift in Sources */,
 				093AA6B32FE8913100F9DF60 /* LocalService.swift in Sources */,
+				097B5DE02FEC2639002542FB /* ExploreViewModel.swift in Sources */,
 				09F939012FEB1557009EA48B /* HomeViewModel.swift in Sources */,
 				09F939162FEB2409009EA48B /* HomeTopView.swift in Sources */,
 				097BCD792FEBCD3100CC1ECD /* HourlyForecastView.swift in Sources */,
 				09F939142FEB2405009EA48B /* HomeMiddleView.swift in Sources */,
 				09F939122FEB23FD009EA48B /* HomeBottomView.swift in Sources */,
 				093AA69F2FE87C9A00F9DF60 /* Skyteller.xcdatamodeld in Sources */,
+				097B5DDE2FEC262C002542FB /* ExploreView.swift in Sources */,
 				097548782FE92F9D00C49AD3 /* City+CoreDataProperties.swift in Sources */,
+				097B5DEB2FEC26E0002542FB /* WeatherLayoutView.swift in Sources */,
 				0975487F2FE9340C00C49AD3 /* NetworkService.swift in Sources */,
 				097548772FE92F9D00C49AD3 /* City+CoreDataClass.swift in Sources */,
+				097B5DE42FEC2667002542FB /* CityWeatherView.swift in Sources */,
 				093AA6932FE87C9800F9DF60 /* SkytellerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
