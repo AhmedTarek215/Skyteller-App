@@ -5,7 +5,7 @@ struct ExploreView: View {
     @EnvironmentObject var themeManager: ThemeManager
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack {
                 // Background
                 (themeManager.isMorning ? Color(red: 0.85, green: 0.92, blue: 1.0) : Color(red: 0.1, green: 0.1, blue: 0.2))
@@ -81,6 +81,10 @@ struct ExploreView: View {
             } message: {
                 Text("Are you sure you want to remove this city from your favorites?")
             }
+        }
+        .onAppear {
+            // Force view to refresh when appearing to reflect any favorite changes from other tabs
+            viewModel.objectWillChange.send()
         }
     }
 }

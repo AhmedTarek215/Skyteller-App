@@ -81,6 +81,7 @@ struct HourlyForecastView: View {
             }
         }
         .navigationBarHidden(true)
+        .toolbar(.hidden, for: .tabBar)
     }
     
     func formatTime(_ timeString: String?) -> String {

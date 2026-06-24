@@ -27,7 +27,7 @@ struct SkytellerApp: App {
                         Text("Explorer")
                     }
                 
-                Text("Favorites")
+                FavoritesView()
                     .tabItem {
                         Image(systemName: "star.fill")
                         Text("Favorites")

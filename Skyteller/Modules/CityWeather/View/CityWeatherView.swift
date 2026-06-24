@@ -14,5 +14,6 @@ struct CityWeatherView: View {
             errorMessage: viewModel.errorMessage,
             showBackButton: true
         )
+        .toolbar(.hidden, for: .tabBar)
     }
 }

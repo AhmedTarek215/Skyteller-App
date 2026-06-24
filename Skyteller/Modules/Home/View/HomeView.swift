@@ -4,7 +4,7 @@ struct HomeView: View {
     @EnvironmentObject var themeManager: ThemeManager
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             WeatherLayoutView(forecast: viewModel.forecastResponse, errorMessage: viewModel.errorMessage)
         }
     }
