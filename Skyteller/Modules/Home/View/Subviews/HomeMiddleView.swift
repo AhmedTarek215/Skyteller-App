@@ -13,36 +13,38 @@ struct HomeMiddleView: View {
             
             if let days = forecast.forecast?.forecastday {
                 ForEach(Array(days.prefix(3).enumerated()), id: \.offset) { index, dayForecast in
-                    HStack {
-                        Text(formatDate(dayForecast.date))
-                            .frame(width: 80, alignment: .leading)
-                        
-                        Spacer()
-                        
-                        if let iconUrlString = dayForecast.day?.condition?.icon,
-                           let url = URL(string: "https:" + iconUrlString) {
-                            AsyncImage(url: url) { image in
-                                image.resizable().scaledToFit()
-                            } placeholder: {
-                                ProgressView()
-                            }
-                            .frame(width: 30, height: 30)
-                        } else {
-                            Image(systemName: "cloud.sun.fill") // Fallback
+                    NavigationLink(destination: HourlyForecastView(dayForecast: dayForecast)) {
+                        HStack {
+                            Text(formatDate(dayForecast.date))
+                                .frame(width: 80, alignment: .leading)
+                            
+                            Spacer()
+                            
+                            if let iconUrlString = dayForecast.day?.condition?.icon,
+                               let url = URL(string: "https:" + iconUrlString) {
+                                AsyncImage(url: url) { image in
+                                    image.resizable().scaledToFit()
+                                } placeholder: {
+                                    ProgressView()
+                                }
                                 .frame(width: 30, height: 30)
+                            } else {
+                                Image(systemName: "cloud.sun.fill") // Fallback
+                                    .frame(width: 30, height: 30)
+                            }
+                            
+                            Spacer()
+                            
+                            Text("\(Int(dayForecast.day?.mintemp_c ?? 0))°")
+                                .frame(width: 40, alignment: .trailing)
+                                .foregroundColor(themeManager.textColor.opacity(0.6))
+                            
+                            Text("\(Int(dayForecast.day?.maxtemp_c ?? 0))°")
+                                .frame(width: 40, alignment: .trailing)
                         }
-                        
-                        Spacer()
-                        
-                        Text("\(Int(dayForecast.day?.mintemp_c ?? 0))°")
-                            .frame(width: 40, alignment: .trailing)
-                            .foregroundColor(themeManager.textColor.opacity(0.6))
-                        
-                        Text("\(Int(dayForecast.day?.maxtemp_c ?? 0))°")
-                            .frame(width: 40, alignment: .trailing)
+                        .font(.system(size: 18, weight: .medium))
+                        .padding(.vertical, 10)
                     }
-                    .font(.system(size: 18, weight: .medium))
-                    .padding(.vertical, 10)
                     
                     if index < min(days.count, 3) - 1 {
                         Divider()
