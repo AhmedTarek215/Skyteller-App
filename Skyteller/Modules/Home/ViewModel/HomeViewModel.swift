@@ -4,6 +4,7 @@ import Combine
 class HomeViewModel: ObservableObject {
     @Published var forecastResponse: ForecastResponse?
     @Published var errorMessage: String?
+    @Published var showLocationAlert: Bool = false
     
     private let networkService: NetworkServiceProtocol
     private let locationManager = LocationManager()
@@ -24,6 +25,15 @@ class HomeViewModel: ObservableObject {
             .first()
             .sink { [weak self] location in
                 self?.fetchWeatherByLocation(lat: location.coordinate.latitude, long: location.coordinate.longitude)
+            }
+            .store(in: &cancellables)
+            
+        locationManager.$isLocationDenied
+            .receive(on: RunLoop.main)
+            .sink { [weak self] denied in
+                if denied {
+                    self?.showLocationAlert = true
+                }
             }
             .store(in: &cancellables)
     }

@@ -4,6 +4,7 @@ import CoreLocation
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     private let manager = CLLocationManager()
     @Published var location: CLLocation?
+    @Published var isLocationDenied: Bool = false
     
     override init() {
         super.init()
@@ -15,8 +16,10 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         switch manager.authorizationStatus {
         case .authorizedWhenInUse, .authorizedAlways:
+            isLocationDenied = false
             manager.startUpdatingLocation()
         case .denied, .restricted:
+            isLocationDenied = true
             print("Location denied")
             if self.location == nil {
                 self.location = CLLocation(latitude: 37.7749, longitude: -122.4194)
