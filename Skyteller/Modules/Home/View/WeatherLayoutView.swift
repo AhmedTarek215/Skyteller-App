@@ -1,8 +1,7 @@
 import SwiftUI
 
 struct WeatherLayoutView: View {
-    var forecast: ForecastResponse?
-    var errorMessage: String?
+    @ObservedObject var viewModel: HomeViewModel
     var showBackButton: Bool = false
     
     @EnvironmentObject var themeManager: ThemeManager
@@ -40,14 +39,14 @@ struct WeatherLayoutView: View {
                     .padding(.top, 10)
                 }
                 
-                if let forecast = forecast {
+                if viewModel.forecastResponse != nil {
                     ScrollView(showsIndicators: false) {
                         VStack(spacing: 20) {
-                            HomeTopView(forecast: forecast)
+                            HomeTopView(viewModel: viewModel)
                             
-                            HomeMiddleView(forecast: forecast)
+                            HomeMiddleView(viewModel: viewModel)
                             
-                            HomeBottomView(forecast: forecast)
+                            HomeBottomView(viewModel: viewModel)
                         }
                         .padding(.horizontal, 20)
                         .padding(.bottom, 100)
@@ -59,7 +58,7 @@ struct WeatherLayoutView: View {
                             .tint(themeManager.textColor)
                             .scaleEffect(1.5)
                         
-                        if let errorMessage = errorMessage {
+                        if let errorMessage = viewModel.errorMessage {
                             Text(errorMessage)
                                 .foregroundColor(.red)
                                 .padding(50)

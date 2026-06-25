@@ -22,7 +22,6 @@
 		097B5DDE2FEC262C002542FB /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097B5DDD2FEC262C002542FB /* ExploreView.swift */; };
 		097B5DE02FEC2639002542FB /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097B5DDF2FEC2639002542FB /* ExploreViewModel.swift */; };
 		097B5DE42FEC2667002542FB /* CityWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097B5DE32FEC2667002542FB /* CityWeatherView.swift */; };
-		097B5DE62FEC266A002542FB /* CityWeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097B5DE52FEC266A002542FB /* CityWeatherViewModel.swift */; };
 		097B5DEB2FEC26E0002542FB /* WeatherLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097B5DEA2FEC26E0002542FB /* WeatherLayoutView.swift */; };
 		097B5DEF2FEC6F37002542FB /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097B5DEE2FEC6F37002542FB /* FavoritesView.swift */; };
 		097B5DF12FEC6F40002542FB /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097B5DF02FEC6F40002542FB /* FavoritesViewModel.swift */; };
@@ -51,7 +50,6 @@
 		097B5DDD2FEC262C002542FB /* ExploreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		097B5DDF2FEC2639002542FB /* ExploreViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
 		097B5DE32FEC2667002542FB /* CityWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityWeatherView.swift; sourceTree = "<group>"; };
-		097B5DE52FEC266A002542FB /* CityWeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityWeatherViewModel.swift; sourceTree = "<group>"; };
 		097B5DEA2FEC26E0002542FB /* WeatherLayoutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeatherLayoutView.swift; path = Skyteller/Modules/Home/View/WeatherLayoutView.swift; sourceTree = SOURCE_ROOT; };
 		097B5DEE2FEC6F37002542FB /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		097B5DF02FEC6F40002542FB /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
@@ -218,7 +216,6 @@
 		097B5DE72FEC267C002542FB /* CityWeather */ = {
 			isa = PBXGroup;
 			children = (
-				097B5DE92FEC2699002542FB /* ViewModel */,
 				097B5DE82FEC2689002542FB /* View */,
 			);
 			path = CityWeather;
@@ -230,14 +227,6 @@
 				097B5DE32FEC2667002542FB /* CityWeatherView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		097B5DE92FEC2699002542FB /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				097B5DE52FEC266A002542FB /* CityWeatherViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		097B5DF22FEC6F76002542FB /* Favorites */ = {
@@ -382,7 +371,6 @@
 				097B5DEF2FEC6F37002542FB /* FavoritesView.swift in Sources */,
 				093AA69C2FE87C9A00F9DF60 /* Persistence.swift in Sources */,
 				09F9390C2FEB1FFE009EA48B /* HomeView.swift in Sources */,
-				097B5DE62FEC266A002542FB /* CityWeatherViewModel.swift in Sources */,
 				09F939182FEB2C7F009EA48B /* LocationManager.swift in Sources */,
 				09F9390E2FEB22AE009EA48B /* ThemeManager.swift in Sources */,
 				093AA6AF2FE8845C00F9DF60 /* ForecastResponse.swift in Sources */,

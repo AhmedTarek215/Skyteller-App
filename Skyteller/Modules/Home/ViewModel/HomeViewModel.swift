@@ -9,9 +9,13 @@ class HomeViewModel: ObservableObject {
     private let locationManager = LocationManager()
     private var cancellables = Set<AnyCancellable>()
     
-    init(networkService: NetworkServiceProtocol = NetworkService()) {
+    init(cityName: String? = nil, networkService: NetworkServiceProtocol = NetworkService()) {
         self.networkService = networkService
-        setupLocation()
+        if let city = cityName {
+            fetchWeatherForCity(city)
+        } else {
+            setupLocation()
+        }
     }
     
     private func setupLocation() {
@@ -26,6 +30,21 @@ class HomeViewModel: ObservableObject {
     
     func fetchWeatherByLocation(lat: Double, long: Double) {
         networkService.fetchForecastByLocation(long: long, lat: lat) { [weak self] response, error in
+            DispatchQueue.main.async {
+                if let error = error {
+                    self?.errorMessage = error.localizedDescription
+                    return
+                }
+                
+                if let response = response {
+                    self?.forecastResponse = response
+                }
+            }
+        }
+    }
+    
+    func fetchWeatherForCity(_ cityName: String) {
+        networkService.fetchForecastByCity(cityName: cityName) { [weak self] response, error in
             DispatchQueue.main.async {
                 if let error = error {
                     self?.errorMessage = error.localizedDescription

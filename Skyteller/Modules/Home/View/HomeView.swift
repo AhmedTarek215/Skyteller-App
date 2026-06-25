@@ -5,7 +5,7 @@ struct HomeView: View {
     
     var body: some View {
         NavigationStack {
-            WeatherLayoutView(forecast: viewModel.forecastResponse, errorMessage: viewModel.errorMessage)
+            WeatherLayoutView(viewModel: viewModel)
         }
     }
 }
