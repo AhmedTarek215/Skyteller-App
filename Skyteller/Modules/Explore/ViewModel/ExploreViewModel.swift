@@ -36,7 +36,7 @@ class ExploreViewModel: ObservableObject {
         if searchText.isEmpty {
             return allCities
         }
-        return allCities.filter { $0.name.lowercased().contains(searchText.lowercased()) }
+        return allCities.filter { $0.name.lowercased().hasPrefix(searchText.lowercased()) }
     }
     
     init(localService: LocalServiceProtocol? = nil) {
